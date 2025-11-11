@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hopkinton Cheetahs - Team Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -44,25 +47,33 @@
 
     <!-- Main Application -->
     <div id="appScreen" class="app-screen" style="display: none;">
-        <header>
-            <div class="header-content">
-                <div class="logo-small">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#FF6B35" stroke="#000" stroke-width="2"/>
-                        <path d="M 30 40 Q 50 20 70 40 Q 50 60 30 40" fill="#000"/>
-                        <circle cx="42" cy="42" r="4" fill="#FFF"/>
-                        <circle cx="58" cy="42" r="4" fill="#FFF"/>
-                        <ellipse cx="50" cy="52" rx="7" ry="4" fill="#000"/>
-                    </svg>
+        <header class="hero">
+            <div class="hero-inner">
+                <div class="hero-brand">
+                    <div class="hero-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" fill="#FF6B35" stroke="#000" stroke-width="2"/>
+                            <path d="M 30 40 Q 50 20 70 40 Q 50 60 30 40" fill="#000"/>
+                            <circle cx="42" cy="42" r="4" fill="#FFF"/>
+                            <circle cx="58" cy="42" r="4" fill="#FFF"/>
+                            <ellipse cx="50" cy="52" rx="7" ry="4" fill="#000"/>
+                        </svg>
+                    </div>
+                    <div class="hero-copy">
+                        <span class="hero-pill">NECA Tournament</span>
+                        <h1>Hopkinton Cheetahs</h1>
+                        <p class="hero-subtitle">Plan rosters, settle dues, and lock availability before every match.</p>
+                        <div class="hero-meta">
+                            <span>Established 2018</span>
+                            <span>Hopkinton, MA</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="header-image">
-                    <img src="https://source.unsplash.com/collection/1189605/140x140" alt="Cricket action">
+                <div class="hero-visual">
+                    <img src="https://source.unsplash.com/collection/1189605/420x320" alt="Cricket action">
+                    <span class="hero-badge">Season 2025</span>
                 </div>
-                <div class="header-text">
-                    <h1>Hopkinton Cheetahs</h1>
-                    <p class="subtitle">NECA Tournament Management</p>
-                </div>
-                <div class="header-controls">
+                <div class="hero-controls">
                     <div class="year-selector">
                         <label for="yearSelect">Tournament Year:</label>
                         <select id="yearSelect"></select>

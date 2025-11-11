@@ -590,22 +590,27 @@ function loadAvailability() {
             const cell = document.createElement('td');
             const availability = getAvailability(player.id, date);
             let statusClass = 'not-set';
-            let statusText = '-';
+            let statusLabel = 'Set availability';
+            let statusIcon = '–';
             
             if (availability) {
                 if (availability.available) {
                     statusClass = 'available';
-                    statusText = 'Yes';
+                    statusIcon = '✓';
+                    statusLabel = 'Available';
                 } else {
                     statusClass = 'unavailable';
-                    statusText = 'No';
+                    statusIcon = '✕';
+                    statusLabel = 'Unavailable';
                 }
+            } else {
+                statusIcon = '?';
             }
             
             cell.innerHTML = `
-                <div class="availability-cell ${statusClass}" onclick="toggleAvailability('${player.id}', '${date}')">
-                    ${statusText}
-                </div>
+                <button class="availability-cell ${statusClass}" type="button" onclick="toggleAvailability('${player.id}', '${date}')" aria-label="${statusLabel} for ${formatWeekDate(date)}">
+                    <span>${statusIcon}</span>
+                </button>
             `;
             row.appendChild(cell);
         });
